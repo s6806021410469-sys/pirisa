@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บไซต์ส่วนตัวของพิริษา</title>
+
+  <style>
+    body {
+      font-family: "Prompt", sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4f46e5;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      min-height: 400px;
+      transition: opacity 0.3s;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #eee;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    img.profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 10px auto;
+      object-fit: cover;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    a {
+      color: #4f46e5;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>เว็บไซต์ส่วนตัวของพิริษา</h1>
+    <nav>
+      <a onclick="showPage('home')">หน้าแรก</a>
+      <a onclick="showPage('about')">เกี่ยวกับฉัน</a>
+      <a onclick="showPage('contact')">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- หน้าแรก -->
+    <section id="home" class="active">
+      <h2>ยินดีต้อนรับ!</h2>
+      <img src="S__14721040.jpg" alt="profile" class="profile">
+      <p style="text-align:center;">สวัสดีค่ะ ฉันชื่อ <b>พิริษา ศรีสวย</b><br>
+      นี่คือเว็บไซต์ส่วนตัวของฉัน สร้างขึ้นด้วย HTML และ CSS ✌️</p>
+    </section>
+
+    <!-- เกี่ยวกับฉัน -->
+    <section id="about">
+      <h2>เกี่ยวกับฉัน</h2>
+      <p>ฉันกำลังศึกษาอยู่ที่ <b>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ เขตปราจีนบุรี</b><br>
+      คณะ เทคโนโลยีและการจัดการอุตสาหกรรมเทคโนโลยีสารสนเทศ </p>
+
+      <h3>ข้อมูลส่วนตัว</h3>
+      <ul>
+        <li>ชื่อ: พิริษา</li>
+        <li>นามสกุล: ศรีสวย</li>
+        <li>สาขา: ITI</li>
+        <li>มหาวิทยาลัย: มจพ. ปราจีนบุรี</li>
+      </ul>
+
+      <h3>ทักษะ</h3>
+      <ul>
+        <li>พื้นฐาน HTML / CSS / C++</li>
+        <li>ออกแบบเว็บไซต์เบื้องต้น</li>
+        <li>ใช้ Microsoft Office และ Canva ได้ดี</li>
+      </ul>
+
+      <h3>งานอดิเรก</h3>
+      <p>ฟังเพลง 🎵, ดูซีรีส์ 🎬, และเรียนรู้เทคโนโลยีใหม่ ๆ 💻</p>
+    </section>
+
+    <!-- ติดต่อ -->
+    <section id="contact">
+      <h2>ติดต่อฉัน</h2>
+      <ul>
+        <li>📧 อีเมล: pirisa@email.com</li>
+        <li>📱 โทรศัพท์: 081-234-5678</li>
+        <li>💬 Facebook: <a href="https://web.facebook.com/film.m.646993/" target="_blank">Pirisa</a></li>
+      </ul>
+
+      <h3>ที่อยู่</h3>
+      <p>จังหวัดปราจีนบุรี ประเทศไทย</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Pirisa. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
